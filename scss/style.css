@@ -1,0 +1,2921 @@
+.container {
+  max-width: 1270px;
+  margin: 0 auto;
+  padding: 0 19px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: Rubik;
+  src: url(../../fonts/Rubik-Regular.ttf);
+}
+body {
+  padding-top: 121px;
+}
+
+header {
+  position: fixed;
+  top: 0px;
+  right: 0;
+  left: 0;
+  background: white;
+  z-index: 10;
+}
+header .nav {
+  display: flex;
+  padding: 36px 0;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  transition: all 0.3s linear;
+  /* ////////////////// RESPONSIVE NAVBAR ////////////////////// */
+  /* MEDIA QUERIES */
+}
+header .nav a svg {
+  display: none;
+}
+header .nav .nav-items {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+header .nav .nav-items input {
+  padding: 12px 60px 12px 16px;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid var(--Text-In-Field, #ccc);
+  width: 443px;
+  color: var(--Text-Body, #808080);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  background-image: url(../../images/search.svg);
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+header .nav .nav-items ::-moz-placeholder {
+  color: var(--Text-Body, #808080);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+header .nav .nav-items ::placeholder {
+  color: var(--Text-Body, #808080);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+header .nav .nav-items a {
+  text-decoration: none;
+  color: var(--Text-Tittle, #1c3554);
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  transition: all 0.5s linear;
+}
+header .nav .nav-items a:hover {
+  color: #1a4c98;
+}
+header .nav .nav-items a button {
+  padding: 8px 32px;
+  border-radius: 8px;
+  border: 1px solid var(--Text-Tittle, #1c3554);
+  background: transparent;
+  transition: all 0.5s linear;
+  color: var(--Text-Tittle, #1c3554);
+  font-family: "Montserrat ";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  cursor: pointer;
+}
+header .nav .nav-items a button:hover {
+  background: #f72585;
+  border: 1px solid var(--Text-Tittle, #f72585);
+  color: white;
+}
+header .nav .nav-items a:nth-child(3) {
+  width: 120px !important;
+}
+header .nav #navbar-responsive.open {
+  left: 0;
+}
+header .nav .menu-btn {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  display: none;
+}
+header .nav .menu-btn span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+}
+@media (max-width: 1145px) {
+  header .nav input {
+    width: 300px !important;
+  }
+}
+@media (max-width: 1050px) {
+  header .nav #navbar-responsive {
+    position: fixed;
+    top: 104px;
+    bottom: 0;
+    left: -100%;
+    height: 500px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    transition: 0.5s;
+  }
+  header .nav .menu-btn {
+    display: flex;
+  }
+}
+@media (max-width: 1050px) {
+  header .nav {
+    padding: 20px 0;
+  }
+  header #navbar-responsive {
+    top: 72px !important;
+  }
+}
+header .navbar-shrink {
+  padding: 10px 0;
+}
+header .navbar-shrink #navbar-responsive {
+  top: 50px !important;
+}
+
+@media (max-width: 1000px) {
+  body {
+    padding-top: 72px;
+  }
+}
+#backtop {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 900;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 4px 4px 12px 2px rgba(0, 0, 0, 0.2);
+  color: #333;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: fixed;
+  right: 20px;
+  bottom: -50px;
+  cursor: pointer;
+  z-index: 99;
+  transition: 0.6s;
+}
+
+.details-page header {
+  background: #666666;
+}
+.details-page header .logo img {
+  display: none;
+}
+.details-page header .logo svg {
+  display: block;
+}
+.details-page header a {
+  color: white !important;
+}
+.details-page header button:nth-child(1) {
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+.details-page header button:nth-child(1):hover {
+  border: 1px solid #f72585 !important;
+}
+.details-page header input {
+  background: transparent;
+  color: #fff !important;
+}
+.details-page header ::-moz-placeholder {
+  color: #e6e6e6 !important;
+}
+.details-page header ::placeholder {
+  color: #e6e6e6 !important;
+}
+.details-page header .nav-items {
+  background: #666666 !important;
+}
+.details-page header .menu-btn span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+}
+
+.blog-page header {
+  background: #666666;
+}
+.blog-page header .logo img {
+  display: none;
+}
+.blog-page header .logo svg {
+  display: block;
+}
+.blog-page header a {
+  color: white !important;
+}
+.blog-page header button:nth-child(1) {
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+.blog-page header button:nth-child(1):hover {
+  border: 1px solid #f72585 !important;
+}
+.blog-page header input {
+  background: transparent;
+  color: #fff !important;
+}
+.blog-page header ::-moz-placeholder {
+  color: #e6e6e6 !important;
+}
+.blog-page header ::placeholder {
+  color: #e6e6e6 !important;
+}
+.blog-page header .nav-items {
+  background: #666666 !important;
+}
+.blog-page header .menu-btn span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+}
+
+.account-page header {
+  background: #666666;
+}
+.account-page header .logo img {
+  display: none;
+}
+.account-page header .logo svg {
+  display: block;
+}
+.account-page header a {
+  color: white !important;
+}
+.account-page header button:nth-child(1) {
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+.account-page header button:nth-child(1):hover {
+  border: 1px solid #f72585 !important;
+}
+.account-page header input {
+  background: transparent;
+  color: #fff !important;
+}
+.account-page header ::-moz-placeholder {
+  color: #e6e6e6 !important;
+}
+.account-page header ::placeholder {
+  color: #e6e6e6 !important;
+}
+.account-page header .nav-items {
+  background: #666666 !important;
+}
+.account-page header .menu-btn span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: Rubik;
+  src: url(../../fonts/Rubik-Regular.ttf);
+}
+footer {
+  background: #021934;
+  padding: 80px 0 40px;
+}
+footer .footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+footer .footer .logo {
+  max-width: 500px;
+}
+footer .footer .logo p {
+  color: var(--Text-white, #fff);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: 36px;
+}
+footer .footer .link {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: space-between;
+  max-width: 600px;
+  width: 100%;
+}
+footer .footer .link .about h4 {
+  color: var(--Text-white, #fff);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  margin-bottom: 24px;
+}
+footer .footer .link .about ul {
+  list-style: none;
+}
+footer .footer .link .about ul li a {
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: var(--Text-white, #fff);
+  font-family: "Montserrat ";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+footer .bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+footer .bottom .left {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+footer .bottom h3 {
+  color: var(--Text-white, #fff);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+}
+@media (max-width: 730px) {
+  footer .footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+  }
+  footer .bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  footer .bottom .left {
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 399.5px) {
+  footer .footer .link {
+    flex-direction: column;
+  }
+}
+.dark {
+  background: rgb(22, 22, 22);
+  transition: all 0.5s linear;
+}
+
+.dark * {
+  color: white;
+}
+
+.dark header {
+  background: black;
+}
+.dark header nav a {
+  color: white !important;
+}
+.dark header nav a img {
+  display: none;
+}
+.dark header nav a svg {
+  display: block;
+}
+.dark header nav a button {
+  color: white !important;
+}
+
+.dark .nav-items input {
+  background-color: black;
+  color: white !important;
+}
+.dark .nav-items ::-moz-placeholder {
+  color: white !important;
+}
+.dark .nav-items ::placeholder {
+  color: white !important;
+}
+
+.dark #navbar-responsive {
+  background-color: rgb(0, 0, 0) !important;
+}
+
+.dark .menu-btn span {
+  background: white !important;
+}
+
+.dark footer {
+  background: rgb(15, 15, 15);
+}
+
+.dark .head {
+  background: rgb(15, 15, 15) !important;
+}
+
+.dark input {
+  color: black !important;
+}
+
+.dark .traiding .traiding-content .cards .card:hover {
+  background: rgb(43, 41, 41) !important;
+}
+
+.dark .traiding .traiding-content .cards .card h5 {
+  color: white !important;
+}
+
+.dark .traiding .traiding-content h3 {
+  color: white !important;
+}
+
+.dark h4 {
+  color: white !important;
+}
+.dark h5 {
+  color: white !important;
+}
+.dark h6 {
+  color: white !important;
+}
+.dark h3 {
+  color: white !important;
+}
+.dark h2 {
+  color: white !important;
+}
+.dark h1 {
+  color: white !important;
+}
+.dark p {
+  color: white !important;
+}
+
+.dark .head .head-content .right .card h5 {
+  color: black !important;
+}
+.dark .head .head-content .right .card h6 {
+  color: black !important;
+}
+
+.dark .carousel .cards .card:hover {
+  background: rgb(43, 41, 41) !important;
+}
+
+.dark .all .all-content-1 .cards .card:hover {
+  background: rgb(43, 41, 41) !important;
+}
+
+.dark .detail .detail-content .ustun .feature .cards {
+  background: rgb(43, 41, 41) !important;
+}
+
+.dark .detail .detail-content .ustun .modul .develop {
+  background: rgb(97, 94, 94) !important;
+}
+
+.dark .detail .detail-content .ustun .modul .develop-bottom .qator {
+  background: rgb(97, 94, 94) !important;
+}
+
+.dark .detail .detail-content .ustun .modul .develop-content {
+  background: rgb(97, 88, 88) !important;
+  border: 1px solid rgb(124, 119, 119) !important;
+}
+
+.dark .hero {
+  background: rgb(43, 41, 41) !important;
+}
+
+.dark .cards .card:hover {
+  background: rgb(43, 41, 41) !important;
+}
+
+.dark main .hero {
+  background: rgb(22, 22, 22) !important;
+}
+
+.dark .blog .center .page a:nth-child(1) {
+  color: white !important;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: Rubik;
+  src: url(../../fonts/Rubik-Regular.ttf);
+}
+.home-page main .head {
+  padding: 65px 0px 0px;
+  background: #021934;
+}
+.home-page main .head .head-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.home-page main .head .head-content .left {
+  max-width: 612px;
+}
+.home-page main .head .head-content .left h1 {
+  color: var(--Text-white, #fff);
+  font-family: Rubik;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 88px;
+}
+.home-page main .head .head-content .left p {
+  color: var(--Text-white, #fff);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: 24px;
+  margin-bottom: 66px;
+}
+.home-page main .head .head-content .left form {
+  position: relative;
+}
+.home-page main .head .head-content .left input {
+  padding: 24px 150px 29px 56px;
+  background-image: url(../../images/search.svg);
+  background-repeat: no-repeat;
+  background-position: left 16px center;
+  outline: none;
+  border-radius: 8px;
+  background-color: white;
+  width: 100%;
+  height: 80px;
+  border: none;
+}
+.home-page main .head .head-content .left button {
+  padding: 12px 32px;
+  color: var(--Text-white, #fff);
+  font-family: "Montserrat ";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  border-radius: 8px;
+  background: var(--Primary-Pink, #f72585);
+  border: none;
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  height: 56px;
+  cursor: pointer;
+}
+.home-page main .head .head-content .left .cards {
+  max-width: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 56px;
+}
+.home-page main .head .head-content .left .cards .card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.home-page main .head .head-content .left .cards .card h6 {
+  color: var(--Text-white, #fff);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.home-page main .head .head-content .right {
+  max-width: 529px;
+  width: 100%;
+  border-radius: 8px;
+  background: var(--Text-Disable, #e6e6e6);
+  height: 683px;
+  position: relative;
+}
+.home-page main .head .head-content .right .img-3 {
+  position: absolute;
+  bottom: 226px;
+  left: 47px;
+}
+.home-page main .head .head-content .right .img-2 {
+  position: absolute;
+  right: 0;
+  bottom: 304px;
+}
+.home-page main .head .head-content .right .img-1 {
+  position: absolute;
+  top: 47px;
+  left: 71px;
+}
+.home-page main .head .head-content .right .card {
+  width: 184px;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 48px;
+  right: 30px;
+}
+.home-page main .head .head-content .right .card h5 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.home-page main .head .head-content .right .card h6 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+.home-page main .head .head-content .right .card img {
+  width: 152px;
+}
+.home-page main .traiding .traiding-content {
+  padding-top: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-page main .traiding .traiding-content h3 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 63.984px;
+}
+.home-page main .traiding .traiding-content .buttons {
+  margin: 56px 0 48px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.home-page main .traiding .traiding-content .buttons button {
+  width: 167px;
+  color: var(--Text-white, #aaa);
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  background: transparent;
+  border: none;
+  padding: 8px 0;
+  border-radius: 8px;
+  transition: all 0.5s linear;
+}
+.home-page main .traiding .traiding-content .buttons button:hover {
+  background: var(--Primary-Pink, #f72585);
+  color: white;
+}
+.home-page main .traiding .traiding-content .cards {
+  display: flex;
+  gap: 17px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.home-page main .traiding .traiding-content .cards .card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  max-width: 295px;
+  transition: all 0.5s linear;
+}
+.home-page main .traiding .traiding-content .cards .card .top {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -16px;
+}
+.home-page main .traiding .traiding-content .cards .card .top button {
+  border-radius: 8px;
+  background: var(--Other-Blue, #4586d6);
+  border: none;
+  color: var(--Text-white, #fff);
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 4px 24px;
+  cursor: pointer;
+}
+.home-page main .traiding .traiding-content .cards .card h5 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+.home-page main .traiding .traiding-content .cards .card h6 {
+  color: var(--Primary-Pink, #f72585);
+  font-family: "Montserrat ";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 8px 0;
+}
+.home-page main .traiding .traiding-content .cards .card .yulduz {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.home-page main .traiding .traiding-content .cards .card .yulduz img {
+  width: 96px;
+}
+.home-page main .traiding .traiding-content .cards .card .yulduz span {
+  color: var(--Text-Body, #808080);
+  font-family: "Montserrat ";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+.home-page main .traiding .traiding-content .cards .card .narx {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.home-page main .traiding .traiding-content .cards .card .narx del {
+  color: var(--Text-In-Field, #ccc);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.home-page main .traiding .traiding-content .cards .card .narx h5 {
+  color: var(--Text-Tittle, #1c3554);
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+.home-page main .traiding .traiding-content .cards .card:hover {
+  background: var(--Other-white, #fff);
+  filter: drop-shadow(40px 40px 57px rgba(0, 0, 0, 0.1));
+}
+.home-page main .traiding .traiding-content .more {
+  padding: 14px 0;
+  width: 288px;
+  border-radius: 8px;
+  background: var(--Primary-Pink, #f72585);
+  border: none;
+  color: var(--Text-white, #fff);
+  text-align: center;
+  font-family: "Montserrat ";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  cursor: pointer;
+  margin-top: 70px;
+  margin-bottom: 160px;
+}
+.home-page main .top .top-content .heading {
+  width: 100%;
+}
+.home-page main .top .top-content .heading h2 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 63.984px;
+  margin-bottom: 56px;
+}
+.home-page main .top .top-content .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+.home-page main .top .top-content .cards .card {
+  position: relative;
+  max-width: 296px;
+}
+.home-page main .top .top-content .cards .card h3 {
+  color: var(--Text-white, #fff);
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  position: absolute;
+  top: 278px;
+  right: 70px;
+  left: 70px;
+}
+.home-page main .icon {
+  margin: 150px 0 0;
+  padding: 40px 0;
+}
+.home-page main .icon .cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+}
+.home-page main .icon .cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 182px;
+}
+.home-page main .icon .cards .card h4 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: capitalize;
+}
+.home-page main .icon .cards .card h5 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.home-page main .mentor {
+  padding: 160px 0;
+}
+.home-page main .mentor .mentor-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 56px;
+}
+.home-page main .mentor .mentor-content .left {
+  max-width: 608px;
+  width: 100%;
+  height: 650px;
+  border-radius: 8px;
+  background: var(--Text-In-Field, #ccc);
+}
+.home-page main .mentor .mentor-content .right h2 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 63.984px;
+}
+.home-page main .mentor .mentor-content .right p {
+  color: var(--Text-Body, #808080);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: 32px;
+  margin-bottom: 40px;
+  max-width: 565px;
+}
+.home-page main .mentor .mentor-content .right button {
+  padding: 16px 40px;
+  border-radius: 8px;
+  background: var(--Primary-Pink, #f72585);
+  color: var(--Text-white, #fff);
+  font-family: "Montserrat ";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  border: none;
+}
+.home-page main .arif {
+  padding: 64px 0;
+}
+.home-page main .arif .arif-content {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 0 30px;
+}
+.home-page main .arif .arif-content .left {
+  max-width: 338px;
+  width: 100%;
+  height: 377px;
+  background: var(--Text-In-Field, #ccc);
+}
+.home-page main .arif .arif-content .right {
+  width: 100%;
+}
+.home-page main .arif .arif-content .right h3 {
+  color: var(--Text-Tittle, #1c3554);
+  font-family: Rubik;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 48px;
+}
+.home-page main .arif .arif-content .right h4 {
+  color: var(--Text-Tittle, #1c3554);
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+.home-page main .arif .arif-content .right p {
+  color: var(--Text-Body, #808080);
+  font-family: "Montserrat ";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+.home-page main .arif .arif-content::after {
+  content: ">";
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  right: -28px;
+}
+.home-page main .arif .arif-content::before {
+  content: "<";
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  left: -28 px;
+}
+.home-page main .company .company-content {
+  margin: 150px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-page main .company .company-content h2 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 63.984px;
+  text-align: center;
+}
+.home-page main .company .company-content .cards {
+  margin-top: 56px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.home-page main .blog {
+  padding-bottom: 150px;
+}
+.home-page main .blog .blog-content h1 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 63.984px;
+  margin-bottom: 56px;
+}
+.home-page main .blog .blog-content .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+.home-page main .blog .blog-content .cards .card {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+  transition: all 0.5s linear;
+}
+.home-page main .blog .blog-content .cards .card p {
+  color: var(--Text-Body, #808080);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.home-page main .blog .blog-content .cards .card .prg {
+  display: flex;
+  gap: 18px;
+}
+.home-page main .blog .blog-content .cards .card h3 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.home-page main .blog .blog-content .cards .card h6 {
+  color: var(--Text-Body, #808080);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.home-page main .blog .blog-content .cards .card h5 {
+  color: var(--Primary-Pink, #f72585);
+  font-family: "Montserrat ";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+.home-page main .blog .blog-content .cards .card:hover {
+  border-radius: 8px;
+  background: var(--Text-white, #fff);
+  filter: drop-shadow(40px 40px 57px rgba(0, 0, 0, 0.1));
+}
+@media (max-width: 1000px) {
+  .home-page main .head .head-content .left h1 {
+    font-size: 44px !important;
+  }
+  .home-page main .head .head-content .left input {
+    height: 60px;
+  }
+  .home-page main .head .head-content .left button {
+    top: 2px !important;
+    right: 8px;
+  }
+  .home-page main .mentor .mentor-content .left {
+    max-width: 400px !important;
+    width: 100%;
+    height: 450px !important;
+  }
+  .home-page main .head {
+    padding-bottom: 60px;
+  }
+  .home-page main .head .head-content .right {
+    max-width: 400px;
+    width: 100%;
+    height: 450px !important;
+  }
+  .home-page main .arif .arif-content .right h3 {
+    font-size: 24px;
+  }
+  .home-page main .arif .arif-content {
+    flex-direction: column;
+    position: relative;
+  }
+  .home-page main .arif .arif-content .left {
+    max-width: 800px;
+    width: 100%;
+    height: 377px;
+    border-radius: 8px;
+  }
+  .home-page main .arif .arif-content::after {
+    display: none;
+  }
+  .home-page main .arif .arif-content::before {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .home-page main .head .head-content {
+    flex-direction: column-reverse;
+  }
+  .home-page main .icon .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .home-page main .mentor .mentor-content {
+    flex-direction: column;
+  }
+  .home-page main .mentor .mentor-content .left {
+    max-width: 700px !important;
+    width: 100% !important;
+    height: 350px !important;
+  }
+  .home-page main .head .head-content .right {
+    max-width: 700px !important;
+    width: 100% !important;
+  }
+  .home-page main .head .head-content .right .img-3 {
+    top: 200px;
+  }
+}
+@media (max-width: 500px) {
+  .home-page main .head .head-content .left h1 {
+    font-size: 32px !important;
+  }
+  .home-page main .traiding .traiding-content h3 {
+    font-size: 32px !important;
+  }
+  .home-page main .top .top-content .heading h2 {
+    text-align: center;
+    font-size: 32px !important;
+  }
+  .home-page main .mentor .mentor-content .right h2 {
+    text-align: center;
+    font-size: 32px !important;
+  }
+  .home-page main .company .company-content h2 {
+    text-align: center;
+    font-size: 32px !important;
+  }
+  .home-page main .blog .blog-content h1 {
+    text-align: center;
+    font-size: 32px !important;
+  }
+  .home-page main .icon .cards {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .home-page main h3 {
+    font-size: 18px !important;
+    line-height: 28px !important;
+  }
+  .home-page main p {
+    font-size: 14px !important;
+  }
+  .home-page main .head .head-content .left .cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .home-page main .top .top-content .cards .card h3 {
+    font-size: 24px !important;
+  }
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: Rubik;
+  src: url(../../fonts/Rubik-Regular.ttf);
+}
+.courses-page main .head .head-content .top {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 16px;
+}
+.courses-page main .head .head-content .top h6 {
+  color: var(--Text-Body, #808080);
+  font-family: "Montserrat ";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.courses-page main .head .head-content .top span {
+  color: black;
+  font-family: "Montserrat ";
+  font-size: 16px;
+  font-weight: 700;
+}
+.courses-page main .head .head-content .top h5 {
+  color: var(--Text-Tittle, #1c3554);
+  font-family: "Montserrat ";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.courses-page main .head .head-content h1 {
+  color: var(--Text-Tittle, #1c3554);
+  font-family: Rubik;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 88px;
+  margin: 24px 0;
+}
+.courses-page main .head .head-content p {
+  color: var(--Text-Body, #808080);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  max-width: 712px;
+}
+.courses-page main .head .head-content h2 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: capitalize;
+  margin: 56px 0 32px;
+}
+.courses-page main .carousel .cards {
+  display: flex;
+  gap: 17px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.courses-page main .carousel .cards .card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  max-width: 260px;
+  transition: all 0.5s linear;
+}
+.courses-page main .carousel .cards .card .top {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -16px;
+}
+.courses-page main .carousel .cards .card .top button {
+  border-radius: 8px;
+  background: var(--Other-Blue, #4586d6);
+  border: none;
+  color: var(--Text-white, #fff);
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 4px 24px;
+  cursor: pointer;
+}
+.courses-page main .carousel .cards .card h5 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+.courses-page main .carousel .cards .card h6 {
+  color: var(--Primary-Pink, #f72585);
+  font-family: "Montserrat ";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 8px 0;
+}
+.courses-page main .carousel .cards .card .yulduz {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.courses-page main .carousel .cards .card .yulduz img {
+  width: 96px;
+}
+.courses-page main .carousel .cards .card .yulduz span {
+  color: var(--Text-Body, #808080);
+  font-family: "Montserrat ";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+.courses-page main .carousel .cards .card .narx {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.courses-page main .carousel .cards .card .narx del {
+  color: var(--Text-In-Field, #ccc);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.courses-page main .carousel .cards .card .narx h5 {
+  color: var(--Text-Tittle, #1c3554);
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+.courses-page main .carousel .cards .card:hover {
+  background: var(--Other-white, #fff);
+  filter: drop-shadow(40px 40px 57px rgba(0, 0, 0, 0.1));
+}
+.courses-page main .carousel .owl-carousel {
+  position: relative;
+}
+.courses-page main .carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  right: -30px;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-100%);
+}
+.courses-page main .carousel .owl-prev,
+.courses-page main .carousel .owl-next {
+  width: 51px;
+  height: 51px;
+  border-radius: 50% !important;
+  background: #ccc !important;
+  color: #fff !important;
+  font-size: 32px !important;
+  transition: all 0.5s linear;
+}
+.courses-page main .carousel .owl-prev:hover,
+.courses-page main .carousel .owl-next:hover {
+  background: #f72585 !important;
+}
+.courses-page main .topics .top {
+  margin-top: 150px;
+  margin-bottom: 56px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.courses-page main .topics .top h1 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 63.984px;
+}
+.courses-page main .topics .top .btn-2 {
+  padding: 14px 70px;
+  border: none;
+  background: #f72585;
+  color: var(--Text-white, #fff);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  border-radius: 8px;
+  width: 288px;
+}
+.courses-page main .topics .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+.courses-page main .topics .cards .card {
+  position: relative;
+  max-width: 296px;
+}
+.courses-page main .topics .cards .card h3 {
+  color: var(--Text-white, #fff);
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  position: absolute;
+  top: 278px;
+  right: 70px;
+  left: 70px;
+}
+.courses-page main .all {
+  margin-bottom: 150px;
+}
+.courses-page main .all .all-content .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 150px;
+  margin-bottom: 56px;
+}
+.courses-page main .all .all-content .top h1 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 63.984px;
+}
+.courses-page main .all .all-content .top .buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.courses-page main .all .all-content .top .buttons button {
+  padding: 16px 40px;
+  color: var(--Other-white, #fff);
+  font-family: "Montserrat ";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  border-radius: 8px;
+  background: var(--Primary-Pink, #f72585);
+  border: none;
+  width: 244px;
+}
+.courses-page main .all .all-content-1 {
+  display: flex;
+  gap: 10px;
+  align-items: start;
+}
+.courses-page main .all .all-content-1 aside {
+  max-width: 242px;
+  width: 100%;
+}
+.courses-page main .all .all-content-1 aside .content {
+  margin-bottom: 32px;
+}
+.courses-page main .all .all-content-1 aside .content .rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.courses-page main .all .all-content-1 aside .content .rating h4 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.courses-page main .all .all-content-1 aside .content .qator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.courses-page main .all .all-content-1 aside .content .urven .qator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.courses-page main .all .all-content-1 aside .content .urven .qator h4 {
+  color: var(--Text-Tittle, #1c3554);
+  font-family: "Montserrat ";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+.courses-page main .all .all-content-1 aside .content .urven .qator h5 {
+  color: var(--Text-Tittle, #1c3554);
+  font-family: "Montserrat ";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+.courses-page main .all .all-content-1 aside .content .urven .qator h6 {
+  color: var(--Text-Body, #808080);
+  font-family: "Montserrat ";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+.courses-page main .all .all-content-1 aside hr {
+  margin-bottom: 32px;
+}
+.courses-page main .all .all-content-1 .hr {
+  background: #808080;
+  width: 2px;
+  height: 1585px;
+  margin-left: 32px;
+  margin-right: 10px;
+}
+.courses-page main .all .all-content-1 .cards {
+  display: flex;
+  gap: 17px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.courses-page main .all .all-content-1 .cards .card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  max-width: 295px;
+  transition: all 0.5s linear;
+}
+.courses-page main .all .all-content-1 .cards .card .top {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -16px;
+}
+.courses-page main .all .all-content-1 .cards .card .top button {
+  border-radius: 8px;
+  background: var(--Other-Blue, #4586d6);
+  border: none;
+  color: var(--Text-white, #fff);
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 4px 24px;
+  cursor: pointer;
+}
+.courses-page main .all .all-content-1 .cards .card h5 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+.courses-page main .all .all-content-1 .cards .card h6 {
+  color: var(--Primary-Pink, #f72585);
+  font-family: "Montserrat ";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 8px 0;
+}
+.courses-page main .all .all-content-1 .cards .card .yulduz {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.courses-page main .all .all-content-1 .cards .card .yulduz img {
+  width: 96px;
+}
+.courses-page main .all .all-content-1 .cards .card .yulduz span {
+  color: var(--Text-Body, #808080);
+  font-family: "Montserrat ";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+.courses-page main .all .all-content-1 .cards .card .narx {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.courses-page main .all .all-content-1 .cards .card .narx del {
+  color: var(--Text-In-Field, #ccc);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.courses-page main .all .all-content-1 .cards .card .narx h5 {
+  color: var(--Text-Tittle, #1c3554);
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+.courses-page main .all .all-content-1 .cards .card:hover {
+  background: var(--Other-white, #fff);
+  filter: drop-shadow(40px 40px 57px rgba(0, 0, 0, 0.1));
+}
+.courses-page main .all .all-content-1 .cards .page {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.courses-page main .all .all-content-1 .cards .page a {
+  text-decoration: none;
+}
+.courses-page main .all .all-content-1 .cards .page h4 {
+  color: #e6e6e6;
+  font-size: 16px;
+  font-weight: 800;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+.courses-page main .all .all-content-1 .cards .page h4:hover {
+  color: #f72585;
+}
+.courses-page main .all .all-content-1 .cards .page h5 {
+  color: var(--Text-In-Field, #ccc);
+  text-align: center;
+  font-family: "Montserrat ";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+.courses-page main .all .all-content-1 .cards .page h5:hover {
+  background: #f72585;
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .courses-page main .all-content-1 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .courses-page main .all-content-1 aside {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 900px !important;
+  }
+  .courses-page main .all-content-1 aside .content {
+    width: 242px;
+  }
+  .courses-page main .all-content-1 aside hr {
+    display: none;
+  }
+  .courses-page main .all-content-1 .hr {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  .courses-page main h1 {
+    font-size: 40px !important;
+  }
+  .courses-page main .all .all-content .top {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .courses-page main .all .all-content .top .buttons {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .courses-page main .topics .top {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .courses-page main .topics .top h1 {
+    text-align: center;
+  }
+}
+@media (max-width: 553px) {
+  .courses-page main .all .all-content-1 aside {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: Rubik;
+  src: url(../../fonts/Rubik-Regular.ttf);
+}
+.details-page main .hero {
+  background: #666666;
+  padding: 16px 0 80px;
+}
+.details-page main .hero .hero-content {
+  max-width: 650px;
+}
+.details-page main .hero .hero-content .top {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding-top: 16px;
+}
+.details-page main .hero .hero-content .top h6 {
+  color: var(--Text-Body, #e6e6e6);
+  font-family: "Montserrat ";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.details-page main .hero .hero-content .top span {
+  color: #e6e6e6;
+  font-family: "Montserrat ";
+  font-size: 16px;
+  font-weight: 700;
+}
+.details-page main .hero .hero-content .top h5 {
+  color: white;
+  font-family: "Montserrat ";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.details-page main .hero .hero-content h1 {
+  color: var(--Text-white, #fff);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 63.984px;
+  margin: 64px 0 24px;
+}
+.details-page main .hero .hero-content .bottom {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+.details-page main .hero .hero-content .bottom h4 {
+  color: var(--Text-white, #fff);
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+.details-page main .hero .hero-content .bottom p {
+  color: var(--Text-Disable, #e6e6e6);
+  font-family: "Montserrat ";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+.details-page main .hero .hero-content .profil {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 40px 0;
+}
+.details-page main .hero .hero-content .profil h4 {
+  color: var(--Other-white, #fff);
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+.details-page main .hero .hero-content .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.details-page main .hero .hero-content .buttons button {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 8px;
+  background: #f72585;
+  color: var(--Other-white, #fff);
+  font-family: "Montserrat ";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.details-page main .hero .hero-content .buttons button span {
+  font-size: 28px;
+}
+.details-page main .hero .hero-content .buttons img {
+  cursor: pointer;
+}
+.details-page main .detail {
+  padding: 96px 0;
+}
+.details-page main .detail .detail-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.details-page main .detail .detail-content .ustun {
+  max-width: 712px;
+  width: 100%;
+}
+.details-page main .detail .detail-content .ustun .from h2 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: capitalize;
+  margin-bottom: 24px;
+}
+.details-page main .detail .detail-content .ustun .from p {
+  color: var(--Text-Body, #808080);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.details-page main .detail .detail-content .ustun .feature h2 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  margin-top: 96px;
+}
+.details-page main .detail .detail-content .ustun .feature .cards {
+  border-radius: 8px;
+  background: var(--primary-20-pink, #fff5f9);
+  padding: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.details-page main .detail .detail-content .ustun .feature .cards .card-1 {
+  max-width: 281px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.details-page main .detail .detail-content .ustun .feature .cards .card-1 .qator {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+}
+.details-page main .detail .detail-content .ustun .feature .cards .card-1 .qator h4 {
+  color: var(--Text-Tittle, #1c3554);
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 800;
+}
+.details-page main .detail .detail-content .ustun .feature .cards .card-2 {
+  max-width: 632px;
+}
+.details-page main .detail .detail-content .ustun .modul .top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 96px;
+  margin-bottom: 40px;
+}
+.details-page main .detail .detail-content .ustun .modul .top h2 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: capitalize;
+}
+.details-page main .detail .detail-content .ustun .modul .top h4 {
+  color: var(--Text-Tittle, #1c3554);
+  text-align: right;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.details-page main .detail .detail-content .ustun .modul .develop {
+  background: var(--primary-20-pink, #fff5f9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 40px;
+}
+.details-page main .detail .detail-content .ustun .modul .develop h4 {
+  color: var(--Text-Tittle, #1c3554);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.details-page main .detail .detail-content .ustun .modul .develop img {
+  cursor: pointer;
+}
+.details-page main .detail .detail-content .ustun .modul .develop-content {
+  padding: 40px;
+  border: 1px solid var(--Text-Disable, #e6e6e6);
+  background: var(--Other-white, #fff);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.details-page main .detail .detail-content .ustun .modul .develop-content .web {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.details-page main .detail .detail-content .ustun .modul .develop-content .web .web-img {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.details-page main .detail .detail-content .ustun .modul .develop-content .web .web-img h4 {
+  color: var(--Text-Tittle, #1c3554);
+  text-align: right;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+.details-page main .detail .detail-content .ustun .modul .develop-content .web h5 {
+  color: var(--Text-Body, #808080);
+  text-align: right;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 0;
+  line-height: 32px;
+}
+.details-page main .detail .detail-content .ustun .modul .develop-bottom .qator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 40px;
+  background: var(--primary-20-pink, #fff5f9);
+  gap: 20px;
+}
+.details-page main .detail .detail-content .ustun .modul .develop-bottom .qator h4 {
+  color: var(--Text-Tittle, #1c3554);
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+.details-page main .detail .detail-content .ustun .btn-3 {
+  padding: 24px 40px;
+  width: 100%;
+  border: none;
+  background: #f72585;
+  color: var(--Other-white, #fff);
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+.details-page main .detail .detail-content aside {
+  max-width: 440px;
+  width: 100%;
+}
+.details-page main .detail .detail-content aside .bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../images/bg\ aside.svg);
+  width: 100%;
+  height: 313px;
+}
+.details-page main .detail .detail-content aside .bottom {
+  border-radius: 8px;
+  border: 1px solid var(--Text-In-Field, #ccc);
+  padding: 32px 24px 40px;
+}
+.details-page main .detail .detail-content aside .bottom .top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.details-page main .detail .detail-content aside .bottom .top h4 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: capitalize;
+}
+.details-page main .detail .detail-content aside .bottom .top del {
+  color: var(--Text-In-Field, #ccc);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.details-page main .detail .detail-content aside .bottom .chegirma {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 0 32px;
+}
+.details-page main .detail .detail-content aside .bottom .chegirma h4 {
+  color: var(--Text-Tittle, #1c3554);
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+.details-page main .detail .detail-content aside .bottom .chegirma button {
+  border-radius: 8px;
+  background: var(--Other-Red, #ef233c);
+  border: none;
+  padding: 16px 20px;
+  color: var(--Text-white, #fff);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.details-page main .detail .detail-content aside .bottom .cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+.details-page main .detail .detail-content aside .bottom .cards .ustun .card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.details-page main .detail .detail-content aside .bottom .cards .ustun .card img {
+  width: 32px;
+  height: 32px;
+  background: #4586d6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.details-page main .detail .detail-content aside .bottom .cards .ustun .card h5 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+.details-page main .detail .detail-content aside .bottom .btn-4 {
+  border-radius: 8px;
+  border: 1px solid var(--Primary-Pink, #f72585);
+  color: var(--Primary-Pink, #f72585);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: capitalize;
+  padding: 24px 40px;
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.5s linear;
+  margin-bottom: 24px;
+}
+.details-page main .detail .detail-content aside .bottom .btn-4:hover {
+  border-radius: 8px;
+  background: var(--Primary-Pink, #f72585);
+  color: var(--Other-white, #fff);
+}
+.details-page main .mentor {
+  margin-bottom: 96px;
+}
+.details-page main .mentor .mentor-content {
+  max-width: 815px;
+}
+.details-page main .mentor .mentor-content h2 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+.details-page main .mentor .mentor-content .img {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.details-page main .mentor .mentor-content .img .text {
+  display: flex;
+  flex-direction: column;
+  max-width: 470px;
+}
+.details-page main .mentor .mentor-content .img .text h5 {
+  color: var(--Text-Body, #808080);
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+.details-page main .mentor .mentor-content .img .text span {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  margin-bottom: 28px;
+}
+.details-page main .mentor .mentor-content .img .text span img {
+  width: 152px;
+}
+.details-page main .mentor .mentor-content .img .text span h3 {
+  color: var(--Text-Tittle, #1c3554);
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+.details-page main .mentor .mentor-content .img .text span h6 {
+  color: var(--Text-Body, #808080);
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.details-page main .mentor .mentor-content .img .text p {
+  color: var(--Text-Body, #808080);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.details-page main .mentor .mentor-content .img .text .course {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 47px;
+}
+.details-page main .mentor .mentor-content .img .text .course .people {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.details-page main .feedback .feedback-content h2 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: capitalize;
+}
+.details-page main .feedback .feedback-content .bottom {
+  display: flex;
+  gap: 24px;
+  margin-top: 31px;
+}
+.details-page main .feedback .feedback-content .bottom .left h1 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 63.984px;
+}
+.details-page main .feedback .feedback-content .bottom .left img {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  width: 151px;
+}
+.details-page main .feedback .feedback-content .bottom .left h5 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+.details-page main .feedback .feedback-content .bottom .right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.details-page main .review .review-content {
+  max-width: 809px;
+}
+.details-page main .review .review-content .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 96px;
+  margin-bottom: 40px;
+}
+.details-page main .review .review-content .top h2 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: capitalize;
+}
+.details-page main .review .review-content .top button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--Other-white, #fff);
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 8px;
+  background: var(--Primary-Pink, #f72585);
+}
+.details-page main .review .review-content .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 33px;
+}
+.details-page main .review .review-content .bottom .profil-1 {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.details-page main .review .review-content .bottom .profil-1 img {
+  width: 102px;
+  height: 102px;
+}
+.details-page main .review .review-content .bottom .profil-1 .name h3 {
+  color: var(--Text-Tittle, #1c3554);
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+.details-page main .review .review-content .bottom .profil-1 .name img {
+  width: 151px;
+  height: 24px;
+  margin: 8px 0;
+}
+.details-page main .review .review-content .bottom .profil-1 .name h5 {
+  color: var(--Text-Body, #808080);
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+.details-page main .review .review-content .bottom .like {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.details-page main .review .review-content p {
+  color: var(--Text-Body, #808080);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.details-page main .review .review-content hr {
+  margin: 32px 0;
+}
+.details-page main .review .review-content .btn-5 {
+  padding: 24px 40px;
+  width: 100%;
+  color: var(--Other-white, #fff);
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  border-radius: 8px;
+  background: var(--Primary-Pink, #f72585);
+  border: none;
+}
+.details-page main .oxiri {
+  padding: 96px 0;
+}
+.details-page main .oxiri .top {
+  margin-bottom: 40px;
+}
+.details-page main .oxiri .top h2 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: capitalize;
+}
+.details-page main .oxiri .cards {
+  display: flex;
+  gap: 17px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.details-page main .oxiri .cards .card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  max-width: 295px;
+  transition: all 0.5s linear;
+}
+.details-page main .oxiri .cards .card .top {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -16px;
+}
+.details-page main .oxiri .cards .card .top button {
+  border-radius: 8px;
+  background: var(--Other-Blue, #4586d6);
+  border: none;
+  color: var(--Text-white, #fff);
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 4px 24px;
+  cursor: pointer;
+}
+.details-page main .oxiri .cards .card h5 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+.details-page main .oxiri .cards .card h6 {
+  color: var(--Primary-Pink, #f72585);
+  font-family: "Montserrat ";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 8px 0;
+}
+.details-page main .oxiri .cards .card .yulduz {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.details-page main .oxiri .cards .card .yulduz img {
+  width: 96px;
+}
+.details-page main .oxiri .cards .card .yulduz span {
+  color: var(--Text-Body, #808080);
+  font-family: "Montserrat ";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+.details-page main .oxiri .cards .card .narx {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.details-page main .oxiri .cards .card .narx del {
+  color: var(--Text-In-Field, #ccc);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.details-page main .oxiri .cards .card .narx h5 {
+  color: var(--Text-Tittle, #1c3554);
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+.details-page main .oxiri .cards .card:hover {
+  background: var(--Other-white, #fff);
+  filter: drop-shadow(40px 40px 57px rgba(0, 0, 0, 0.1));
+}
+@media (max-width: 900px) {
+  .details-page main .detail .detail-content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+@media (max-width: 840px) {
+  .details-page main .mentor .mentor-content .img {
+    flex-direction: column;
+    align-items: start;
+  }
+  .details-page main .feedback .feedback-content .bottom {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+@media (max-width: 700px) {
+  .details-page main .detail .detail-content .ustun .feature .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 650px) {
+  .details-page main h1 {
+    font-size: 34px !important;
+    margin: 30px 0 !important;
+  }
+  .details-page main .feedback .feedback-content .bottom .left h1 {
+    margin: 0 !important;
+  }
+  .details-page main .feedback .feedback-content .bottom .right img:nth-child(1) {
+    width: 400px !important;
+  }
+  .details-page main .feedback .feedback-content .bottom .right img:nth-child(2) {
+    width: 380px !important;
+  }
+  .details-page main .feedback .feedback-content .bottom .right img:nth-child(3) {
+    width: 360px !important;
+  }
+  .details-page main .feedback .feedback-content .bottom .right img:nth-child(4) {
+    width: 340px !important;
+  }
+  .details-page main .feedback .feedback-content .bottom .right img:nth-child(5) {
+    width: 320px !important;
+  }
+  .details-page main .hero .hero-content .top {
+    flex-direction: column;
+    gap: 0;
+    align-items: start;
+  }
+}
+@media (max-width: 500px) {
+  .details-page main h2 {
+    font-size: 26px !important;
+  }
+  .details-page main h1 {
+    font-size: 32px !important;
+  }
+  .details-page main p {
+    font-size: 14px !important;
+  }
+  .details-page main button {
+    font-size: 14px !important;
+  }
+  .details-page main h3 {
+    font-size: 18px !important;
+  }
+  .details-page main h4 {
+    font-size: 12px !important;
+  }
+  .details-page main h5 {
+    font-size: 12px !important;
+  }
+  .details-page main .detail .detail-content aside {
+    width: 350px;
+  }
+  .details-page main .review .review-content .bottom .profil-1 img {
+    width: 60px;
+    height: 60px;
+  }
+  .details-page main .feedback .feedback-content .bottom .right img:nth-child(1) {
+    width: 350px !important;
+  }
+  .details-page main .feedback .feedback-content .bottom .right img:nth-child(2) {
+    width: 340px !important;
+  }
+  .details-page main .feedback .feedback-content .bottom .right img:nth-child(3) {
+    width: 330px !important;
+  }
+  .details-page main .feedback .feedback-content .bottom .right img:nth-child(4) {
+    width: 320px !important;
+  }
+  .details-page main .feedback .feedback-content .bottom .right img:nth-child(5) {
+    width: 310px !important;
+  }
+  .details-page main .hero .hero-content .bottom {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: Rubik;
+  src: url(../../fonts/Rubik-Regular.ttf);
+}
+.blog-page main .hero {
+  background: #666666;
+  padding-top: 16px;
+  padding-bottom: 120px;
+}
+.blog-page main .hero .top {
+  margin-bottom: 64px;
+}
+.blog-page main .hero .top p {
+  color: var(--Text-Disable, #e6e6e6);
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+.blog-page main .hero .top p span {
+  color: var(--Text-white, #fff);
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+.blog-page main .hero h1 {
+  color: var(--Text-white, #fff);
+  font-family: Rubik;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 88px;
+}
+.blog-page main .box {
+  padding: 96px 0;
+}
+.blog-page main .box .cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 56px;
+  gap: 20px;
+}
+.blog-page main .box .cards .img {
+  max-width: 608px;
+  width: 100%;
+  height: 517px;
+  background: #ccc;
+  border-radius: 8px;
+}
+.blog-page main .box .cards .text {
+  max-width: 552px;
+}
+.blog-page main .box .cards .text h2 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: capitalize;
+}
+.blog-page main .box .cards .text .min {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.blog-page main .box .cards .text .min p {
+  color: var(--Text-Body, #808080);
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.blog-page main .box .cards .text p {
+  color: var(--Text-Body, #808080);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.blog-page main .box .cards .text button {
+  padding: 12px 32px;
+  color: var(--Text-white, #fff);
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  border-radius: 8px;
+  background: var(--Primary-Pink, #f72585);
+  border: none;
+  cursor: pointer;
+  margin-top: 72px;
+}
+.blog-page main .box .page {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+.blog-page main .box .page a {
+  text-decoration: none;
+}
+.blog-page main .box .page h4 {
+  color: #e6e6e6;
+  font-size: 16px;
+  font-weight: 800;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+.blog-page main .box .page h4:hover {
+  color: #f72585;
+}
+.blog-page main .box .page h5 {
+  color: var(--Text-In-Field, #ccc);
+  text-align: center;
+  font-family: "Montserrat ";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+.blog-page main .box .page h5:hover {
+  background: #f72585;
+  color: #fff;
+}
+@media (max-width: 1000px) {
+  .blog-page main .box .cards {
+    flex-direction: column;
+    margin-bottom: 70px;
+  }
+  .blog-page main .box .cards .text button {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .blog-page main h1 {
+    font-size: 40px !important;
+  }
+  .blog-page main h2 {
+    font-size: 26px !important;
+  }
+  .blog-page main p {
+    font-size: 14px !important;
+  }
+  .blog-page main button {
+    font-size: 14px !important;
+  }
+  .blog-page main .box .cards .img {
+    height: 300px;
+  }
+}
+
+.account-page main .hero {
+  padding: 160px 0;
+  background: #666666;
+}
+.account-page main .blog {
+  padding: 48px 0 160px;
+}
+.account-page main .blog .top {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.account-page main .blog .top img {
+  width: 150px;
+  height: 150px;
+}
+.account-page main .blog .top .name h2 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: capitalize;
+}
+.account-page main .blog .top .name p {
+  color: var(--Text-Body, #808080);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+.account-page main .blog .center {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+  margin-bottom: 40px;
+}
+.account-page main .blog .center .page {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 900px;
+  width: 100%;
+}
+.account-page main .blog .center .page a {
+  color: var(--Text-Body, #808080);
+  font-family: Rubik;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 48px;
+  text-decoration: none;
+}
+.account-page main .blog .center .page a:nth-child(1) {
+  color: var(--Text-Tittle, #1c3554);
+  border-bottom: 5px solid #f72585;
+  font-weight: 600;
+}
+.account-page main .blog .cards {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.account-page main .blog .cards .card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  max-width: 290px;
+  transition: all 0.5s linear;
+}
+.account-page main .blog .cards .card .top {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -16px;
+}
+.account-page main .blog .cards .card .top button {
+  border-radius: 8px;
+  background: var(--Other-Blue, #4586d6);
+  border: none;
+  color: var(--Text-white, #fff);
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 4px 24px;
+  cursor: pointer;
+}
+.account-page main .blog .cards .card h5 {
+  color: var(--Text-Tittle, #1c3554);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+.account-page main .blog .cards .card h6 {
+  color: var(--Primary-Pink, #f72585);
+  font-family: "Montserrat ";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 8px 0;
+}
+.account-page main .blog .cards .card .yulduz {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.account-page main .blog .cards .card .yulduz img {
+  width: 96px;
+}
+.account-page main .blog .cards .card .yulduz span {
+  color: var(--Text-Body, #808080);
+  font-family: "Montserrat ";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+.account-page main .blog .cards .card .narx {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.account-page main .blog .cards .card .narx del {
+  color: var(--Text-In-Field, #ccc);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.account-page main .blog .cards .card .narx h5 {
+  color: var(--Text-Tittle, #1c3554);
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+.account-page main .blog .cards .card:hover {
+  background: var(--Other-white, #fff);
+  filter: drop-shadow(40px 40px 57px rgba(0, 0, 0, 0.1));
+}
+.account-page main .blog .cards .page {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.account-page main .blog .cards .page a {
+  text-decoration: none;
+}
+.account-page main .blog .cards .page h4 {
+  color: #e6e6e6;
+  font-size: 16px;
+  font-weight: 800;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+.account-page main .blog .cards .page h4:hover {
+  color: #f72585;
+}
+.account-page main .blog .cards .page h5 {
+  color: var(--Text-In-Field, #ccc);
+  text-align: center;
+  font-family: "Montserrat ";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+.account-page main .blog .cards .page h5:hover {
+  background: #f72585;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .account-page main .blog .top img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .account-page main h2 {
+    font-size: 26px !important;
+    line-height: 30px !important;
+  }
+  .account-page main a {
+    font-size: 26px !important;
+  }
+  .account-page main .blog .center .page {
+    flex-direction: column;
+    align-items: center;
+  }
+}/*# sourceMappingURL=style.css.map */

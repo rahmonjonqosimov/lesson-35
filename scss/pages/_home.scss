@@ -1,0 +1,677 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: Rubik;
+  src: url(../../fonts/Rubik-Regular.ttf);
+}
+
+.home-page {
+  main {
+    .head {
+      padding: 65px 0px 0px;
+      background: #021934;
+      .head-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        .left {
+          max-width: 612px;
+          h1 {
+            color: var(--Text-white, #fff);
+            font-family: Rubik;
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 88px;
+          }
+          p {
+            color: var(--Text-white, #fff);
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 27px;
+            margin-top: 24px;
+            margin-bottom: 66px;
+          }
+          form {
+            position: relative;
+          }
+          input {
+            padding: 24px 150px 29px 56px;
+            background-image: url(../../images/search.svg);
+            background-repeat: no-repeat;
+            background-position: left 16px center;
+            outline: none;
+            border-radius: 8px;
+            background-color: white;
+            width: 100%;
+            height: 80px;
+            border: none;
+          }
+          button {
+            padding: 12px 32px;
+            color: var(--Text-white, #fff);
+            font-family: "Montserrat ";
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 32px;
+            border-radius: 8px;
+            background: var(--Primary-Pink, #f72585);
+            border: none;
+            position: absolute;
+            right: 16px;
+            top: 12px;
+            height: 56px;
+            cursor: pointer;
+          }
+          .cards {
+            max-width: 540px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 56px;
+            .card {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              h6 {
+                color: var(--Text-white, #fff);
+                font-variant-numeric: lining-nums proportional-nums;
+                font-family: Rubik;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 24px;
+              }
+            }
+          }
+        }
+        .right {
+          max-width: 529px;
+          width: 100%;
+          border-radius: 8px;
+          background: var(--Text-Disable, #e6e6e6);
+          height: 683px;
+          position: relative;
+          .img-3 {
+            position: absolute;
+            bottom: 226px;
+            left: 47px;
+          }
+          .img-2 {
+            position: absolute;
+            right: 0;
+            bottom: 304px;
+          }
+          .img-1 {
+            position: absolute;
+            top: 47px;
+            left: 71px;
+          }
+          .card {
+            width: 184px;
+            border-radius: 8px;
+            padding: 16px;
+            background: #fff;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: 48px;
+            right: 30px;
+            h5 {
+              color: var(--Text-Tittle, #1c3554);
+              font-variant-numeric: lining-nums proportional-nums;
+              font-family: Rubik;
+              font-size: 24px;
+              font-weight: 700;
+              line-height: 32px;
+            }
+            h6 {
+              color: var(--Text-Tittle, #1c3554);
+              font-variant-numeric: lining-nums proportional-nums;
+              font-family: Rubik;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 24px;
+              text-transform: capitalize;
+            }
+            img {
+              width: 152px;
+            }
+          }
+        }
+      }
+    }
+    .traiding {
+      .traiding-content {
+        padding-top: 88px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+          color: var(--Text-Tittle, #1c3554);
+          font-variant-numeric: lining-nums proportional-nums;
+          font-family: Rubik;
+          font-size: 48px;
+          font-weight: 700;
+          line-height: 63.984px;
+        }
+        .buttons {
+          margin: 56px 0 48px;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 24px;
+          button {
+            width: 167px;
+            color: var(--Text-white, #aaa);
+            font-family: "Montserrat";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 32px;
+            background: transparent;
+            border: none;
+            padding: 8px 0;
+            border-radius: 8px;
+            transition: all 0.5s linear;
+            &:hover {
+              background: var(--Primary-Pink, #f72585);
+              color: white;
+            }
+          }
+        }
+        .cards {
+          display: flex;
+          gap: 17px;
+
+          justify-content: center;
+          flex-wrap: wrap;
+          .card {
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            max-width: 295px;
+            transition: all 0.5s linear;
+            .top {
+              display: flex;
+              justify-content: center;
+              position: relative;
+              top: -16px;
+              button {
+                border-radius: 8px;
+                background: var(--Other-Blue, #4586d6);
+                border: none;
+                color: var(--Text-white, #fff);
+                font-family: "Montserrat";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                padding: 4px 24px;
+                cursor: pointer;
+              }
+            }
+
+            h5 {
+              color: var(--Text-Tittle, #1c3554);
+              font-variant-numeric: lining-nums proportional-nums;
+              font-family: Rubik;
+              font-size: 16px;
+              font-weight: 600;
+              line-height: 24px;
+              text-transform: capitalize;
+            }
+            h6 {
+              color: var(--Primary-Pink, #f72585);
+              font-family: "Montserrat ";
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 24px;
+              margin: 8px 0;
+            }
+            .yulduz {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              img {
+                width: 96px;
+              }
+              span {
+                color: var(--Text-Body, #808080);
+                font-family: "Montserrat ";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+              }
+            }
+            .narx {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              margin-top: 16px;
+              del {
+                color: var(--Text-In-Field, #ccc);
+                font-family: Montserrat;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 27px;
+              }
+              h5 {
+                color: var(--Text-Tittle, #1c3554);
+                font-family: Rubik;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 32px;
+              }
+            }
+            &:hover {
+              background: var(--Other-white, #fff);
+              filter: drop-shadow(40px 40px 57px rgba(0, 0, 0, 0.1));
+            }
+          }
+        }
+        .more {
+          padding: 14px 0;
+          width: 288px;
+          border-radius: 8px;
+          background: var(--Primary-Pink, #f72585);
+          border: none;
+          color: var(--Text-white, #fff);
+          text-align: center;
+          font-family: "Montserrat ";
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 32px;
+          cursor: pointer;
+          margin-top: 70px;
+          margin-bottom: 160px;
+        }
+      }
+    }
+    .top {
+      .top-content {
+        .heading {
+          width: 100%;
+          h2 {
+            color: var(--Text-Tittle, #1c3554);
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: Rubik;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 63.984px;
+            margin-bottom: 56px;
+          }
+        }
+        .cards {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 16px;
+          .card {
+            position: relative;
+            max-width: 296px;
+            h3 {
+              color: var(--Text-white, #fff);
+              font-family: Rubik;
+              font-size: 24px;
+              font-weight: 500;
+              line-height: 32px;
+              position: absolute;
+              top: 278px;
+              right: 70px;
+              left: 70px;
+            }
+          }
+        }
+      }
+    }
+    .icon {
+      margin: 150px 0 0;
+      padding: 40px 0;
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        place-items: center;
+        .card {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          max-width: 182px;
+          h4 {
+            color: var(--Text-Tittle, #1c3554);
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: Rubik;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 48px;
+            text-transform: capitalize;
+          }
+          h5 {
+            color: var(--Text-Tittle, #1c3554);
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: Rubik;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+          }
+        }
+      }
+    }
+    .mentor {
+      padding: 160px 0;
+      .mentor-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 56px;
+        .left {
+          max-width: 608px;
+          width: 100%;
+          height: 650px;
+          border-radius: 8px;
+          background: var(--Text-In-Field, #ccc);
+        }
+        .right {
+          h2 {
+            color: var(--Text-Tittle, #1c3554);
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: Rubik;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 63.984px;
+          }
+          p {
+            color: var(--Text-Body, #808080);
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 27px;
+            margin-top: 32px;
+            margin-bottom: 40px;
+            max-width: 565px;
+          }
+          button {
+            padding: 16px 40px;
+            border-radius: 8px;
+            background: var(--Primary-Pink, #f72585);
+            color: var(--Text-white, #fff);
+            font-family: "Montserrat ";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 32px;
+            border: none;
+          }
+        }
+      }
+    }
+    .arif {
+      padding: 64px 0;
+      .arif-content {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+        padding: 0 30px;
+        .left {
+          max-width: 338px;
+          width: 100%;
+          height: 377px;
+          background: var(--Text-In-Field, #ccc);
+        }
+        .right {
+          width: 100%;
+          h3 {
+            color: var(--Text-Tittle, #1c3554);
+            font-family: Rubik;
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 48px;
+          }
+          h4 {
+            color: var(--Text-Tittle, #1c3554);
+            font-family: Rubik;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 32px;
+            margin-top: 32px;
+            margin-bottom: 8px;
+          }
+          p {
+            color: var(--Text-Body, #808080);
+            font-family: "Montserrat ";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+          }
+        }
+        &::after {
+          content: ">";
+          font-size: 28px;
+          font-weight: 700;
+          cursor: pointer;
+          position: relative;
+          right: -28px;
+        }
+        &::before {
+          content: "<";
+          font-size: 28px;
+          font-weight: 700;
+          cursor: pointer;
+          position: relative;
+          left: -28 px;
+        }
+      }
+    }
+    .company {
+      .company-content {
+        margin: 150px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+          color: var(--Text-Tittle, #1c3554);
+          font-variant-numeric: lining-nums proportional-nums;
+          font-family: Rubik;
+          font-size: 48px;
+          font-weight: 700;
+          line-height: 63.984px;
+          text-align: center;
+        }
+        .cards {
+          margin-top: 56px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 40px;
+        }
+      }
+    }
+    .blog {
+      padding-bottom: 150px;
+      .blog-content {
+        h1 {
+          color: var(--Text-Tittle, #1c3554);
+          font-variant-numeric: lining-nums proportional-nums;
+          font-family: Rubik;
+          font-size: 48px;
+
+          font-weight: 700;
+          line-height: 63.984px;
+          margin-bottom: 56px;
+        }
+        .cards {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 16px;
+
+          .card {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 400px;
+            transition: all 0.5s linear;
+            p {
+              color: var(--Text-Body, #808080);
+              font-family: Montserrat;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 24px;
+            }
+            .prg {
+              display: flex;
+              gap: 18px;
+            }
+            h3 {
+              color: var(--Text-Tittle, #1c3554);
+              font-variant-numeric: lining-nums proportional-nums;
+              font-family: Rubik;
+              font-size: 24px;
+              font-weight: 700;
+              line-height: 32px;
+            }
+            h6 {
+              color: var(--Text-Body, #808080);
+              font-family: Montserrat;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 27px;
+            }
+            h5 {
+              color: var(--Primary-Pink, #f72585);
+              font-family: "Montserrat ";
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 32px;
+            }
+            &:hover {
+              border-radius: 8px;
+              background: var(--Text-white, #fff);
+              filter: drop-shadow(40px 40px 57px rgba(0, 0, 0, 0.1));
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 1000px) {
+      .head .head-content .left h1 {
+        font-size: 44px !important;
+      }
+      .head .head-content .left input {
+        height: 60px;
+      }
+      .head .head-content .left button {
+        top: 2px !important;
+        right: 8px;
+      }
+      .mentor .mentor-content .left {
+        max-width: 400px !important;
+        width: 100%;
+        height: 450px !important;
+      }
+      .head {
+        padding-bottom: 60px;
+        .head-content .right {
+          max-width: 400px;
+          width: 100%;
+          height: 450px !important;
+        }
+      }
+      .arif .arif-content .right h3 {
+        font-size: 24px;
+      }
+      .arif .arif-content {
+        flex-direction: column;
+        position: relative;
+        .left {
+          max-width: 800px;
+          width: 100%;
+          height: 377px;
+          border-radius: 8px;
+        }
+        &::after {
+          display: none;
+        }
+        &::before {
+          display: none;
+        }
+      }
+    }
+    @media (max-width: 760px) {
+      .head .head-content {
+        flex-direction: column-reverse;
+      }
+      .icon .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+      .mentor .mentor-content {
+        flex-direction: column;
+      }
+      .mentor .mentor-content .left {
+        max-width: 700px !important;
+        width: 100% !important  ;
+        height: 350px !important;
+      }
+      .head .head-content .right {
+        max-width: 700px !important;
+        width: 100% !important  ;
+        .img-3 {
+          top: 200px;
+        }
+      }
+    }
+    @media (max-width: 500px) {
+      .head .head-content .left h1 {
+        font-size: 32px !important;
+      }
+      .traiding .traiding-content h3 {
+        font-size: 32px !important;
+      }
+      .top .top-content .heading h2 {
+        text-align: center;
+        font-size: 32px !important;
+      }
+      .mentor .mentor-content .right h2 {
+        text-align: center;
+        font-size: 32px !important;
+      }
+      .company .company-content h2 {
+        text-align: center;
+        font-size: 32px !important;
+      }
+      .blog .blog-content h1 {
+        text-align: center;
+        font-size: 32px !important;
+      }
+      .icon .cards {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      h3 {
+        font-size: 18px !important;
+        line-height: 28px !important;
+      }
+      p {
+        font-size: 14px !important;
+      }
+      .head .head-content .left .cards {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .top .top-content .cards .card h3 {
+        font-size: 24px !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+.dark {
+  background: rgb(22, 22, 22);
+  transition: all 0.5s linear;
+}
+
+.dark * {
+  color: white;
+}
+.dark header {
+  background: black;
+  nav {
+    a {
+      color: white !important;
+      img {
+        display: none;
+      }
+      svg {
+        display: block;
+      }
+      button {
+        color: white !important;
+      }
+    }
+  }
+}
+.dark .nav-items {
+  input {
+    background-color: black;
+    color: white !important;
+  }
+  ::placeholder {
+    color: white !important;
+  }
+}
+.dark #navbar-responsive {
+  background-color: rgb(0, 0, 0) !important;
+}
+.dark .menu-btn {
+  span {
+    background: white !important;
+  }
+}
+.dark footer {
+  background: rgb(15, 15, 15);
+}
+.dark .head {
+  background: rgb(15, 15, 15) !important;
+}
+.dark input {
+  color: black !important;
+}
+.dark .traiding .traiding-content .cards .card:hover {
+  background: rgb(43, 41, 41) !important;
+}
+.dark .traiding .traiding-content .cards .card {
+  h5 {
+    color: white !important ;
+  }
+}
+.dark .traiding .traiding-content h3 {
+  color: white !important;
+}
+.dark {
+  h4 {
+    color: white !important;
+  }
+  h5 {
+    color: white !important;
+  }
+  h6 {
+    color: white !important;
+  }
+  h3 {
+    color: white !important;
+  }
+  h2 {
+    color: white !important;
+  }
+  h1 {
+    color: white !important;
+  }
+  p {
+    color: white !important;
+  }
+}
+.dark .head .head-content .right .card {
+  h5 {
+    color: black !important;
+  }
+  h6 {
+    color: black !important;
+  }
+}
+.dark .carousel .cards .card:hover {
+  background: rgb(43, 41, 41) !important;
+}
+.dark {
+  .all .all-content-1 .cards .card:hover {
+    background: rgb(43, 41, 41) !important;
+  }
+}
+.dark .detail .detail-content .ustun .feature .cards {
+  background: rgb(43, 41, 41) !important;
+}
+.dark .detail .detail-content .ustun .modul .develop {
+  background: rgb(97, 94, 94) !important;
+}
+.dark .detail .detail-content .ustun .modul .develop-bottom .qator {
+  background: rgb(97, 94, 94) !important;
+}
+.dark .detail .detail-content .ustun .modul .develop-content {
+  background: rgb(97, 88, 88) !important;
+  border: 1px solid rgb(124, 119, 119) !important;
+}
+.dark .hero {
+  background: rgb(43, 41, 41) !important;
+}
+.dark {
+  .cards .card:hover {
+    background: rgb(43, 41, 41) !important;
+  }
+}
+.dark {
+  main .hero {
+    background: rgb(22, 22, 22) !important;
+  }
+}
+.dark .blog .center .page a:nth-child(1) {
+  color: white !important;
+}
