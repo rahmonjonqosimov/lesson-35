@@ -117,7 +117,7 @@
 }
 .dark {
   .cards .card:hover {
-    background: rgb(43, 41, 41) !important;
+    background: rgb(22, 22, 22) !important;
   }
 }
 .dark {
@@ -127,4 +127,12 @@
 }
 .dark .blog .center .page a:nth-child(1) {
   color: white !important;
+}
+.dark main .top .top-content .cards .card:hover {
+  background: rgb(22, 22, 22) !important;
+}
+.dark .topics .cards .card:hover {
+}
+.dark main .icon .cards .card:hover {
+  background: rgb(22, 22, 22) !important;
 }
